@@ -34,11 +34,17 @@ export function init() {
 
     state.inputNumber.addEventListener('change', handleInputNumberChange)
 
+    state.inputNumber.addEventListener('keyup', handleInputNumberKeyUp)
+
     state.btnClear.addEventListener('click', handleBtnClearClick)
 
     state.btnSave.addEventListener('click', handleBtnSaveClick)
 
     state.inputCep.addEventListener('change', handleInputCepChange)
+}
+
+function handleInputNumberKeyUp(event) {
+   state.address.number = event.target.value
 }
 
 async function handleInputCepChange(event) {
@@ -47,7 +53,6 @@ async function handleInputCepChange(event) {
 
     try {
         const address = await addressService.findByCep(cep)
-
 
         state.inputStreet.value = address.street
         state.inputCity.value = address.city
@@ -65,8 +70,7 @@ async function handleInputCepChange(event) {
 
 async function handleBtnSaveClick(event) {
     event.preventDefault()
-    console.log(event.target)
-    console.log(result)
+    console.log(state.address)
 }
 
 function handleInputNumberChange(event) {
