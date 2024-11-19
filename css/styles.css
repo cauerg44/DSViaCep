@@ -1,8 +1,13 @@
+@import 'modal.css';
+@import 'buttons.css';
+
 :root {
     --color-white: #fff;
     --color-black: #000000;
     --color-orange: #ff8400;
     --color-gray: #333;
+    --color-modal-color-bg: #444;
+    --color-border-modal: #aaa;
     --color-light-gray: #c9c9c9;
     --color-medium-gray: #8f8f8f;
     --color-light-red: #faa;
@@ -90,31 +95,6 @@ html, body {
 
 .form-input:disabled {
     background-color: #ddd;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.btn {
-    width: 250px;
-    height: 50px;
-    background-color: var(--color-orange);
-    border: 0;
-    border-radius: 4px;
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.btn-left {
-    margin-right: 10px;
-}
-
-.btn-right {
-    margin-left: 10px;
 }
 
 .list-container {
