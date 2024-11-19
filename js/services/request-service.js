@@ -7,6 +7,6 @@ export async function getJson(url) {
         return jsonBody
     }
     catch (e) {
-        throw new Request("Erro ao realizar requisição")
+        throw new RequestException("Erro ao realizar requisição")
     }
 }
