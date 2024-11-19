@@ -4,7 +4,8 @@
     --color-orange: #ff8400;
     --color-gray: #333;
     --color-light-gray: #c9c9c9;
-    --color-red-light: #faa;
+    --color-medium-gray: #8f8f8f;
+    --color-light-red: #faa;
 }
 
 * {
@@ -71,7 +72,7 @@ html, body {
 
 .error-message {
     margin-top: 5px;
-    color: var(--color-red-light);
+    color: var(--color-light-red);
 }
 
 .form-input {
@@ -114,4 +115,37 @@ html, body {
 
 .btn-right {
     margin-left: 10px;
+}
+
+.list-container {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-list-item {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card-list-item h3 {
+    color: var(--color-orange);
+    font-size: 18px;
+}
+
+.address-line {
+    color: var(--color-white);
+    font-size: 14px;
+}
+
+.address-cep {
+    color: var(--color-medium-gray);
+    font-size: 12px;
 }
